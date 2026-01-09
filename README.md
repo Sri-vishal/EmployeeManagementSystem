@@ -195,6 +195,22 @@ One Organization → Many Employees
 
 employees.organization_id → organizations.id
 
+Technology choosen reason:  
+
+This project uses Vue.js 2 for the frontend and Node.js with Express for the backend to create a clean and scalable employee management system. Vue.js 2 was chosen because of its simplicity, component-based architecture, and reactive data binding, which made it easy to build reusable UI components such as employee tables, forms, and filters. Its lightweight nature and clear separation of concerns helped maintain a smooth user experience. Node.js was selected for the backend due to its non-blocking, event-driven architecture, which is well suited for building RESTful APIs and handling multiple client requests efficiently. Express further simplified routing and API structure.
+
+Challenges:
+
+During development, key challenges included designing a clean frontend–backend communication flow, managing state across multiple Vue components, and handling API error responses consistently. Ensuring proper data validation and implementing soft delete functionality for employees also required careful planning.
+
+Future Improvements:
+
+With more development time, several enhancements could be implemented, such as user authentication with role-based access control. Adding unit and integration tests, introducing CI/CD pipelines, and deploying the application using containerization tools like Docker for better scalability and maintainability.
+
+The application implements a soft delete mechanism for employees instead of permanently removing records from the database. When an employee is deleted, the record is marked as inactive using a status flag (is_deleted), allowing the data to be preserved for auditing and recovery purposes. Deleted employees are displayed in a separate Deleted Employees view, where users can review previously removed records.
+
+An enhancement to this functionality allows users to restore deleted employees back to the active employees list. Upon restoration, the is_deleted flag is updated, and the employee immediately reappears in the main Employees view without data loss. This approach improves data safety, reduces the risk of accidental deletions, and aligns with real-world enterprise data management practices.
+
 ## 📸 Screenshots
 
 ### Organizations
