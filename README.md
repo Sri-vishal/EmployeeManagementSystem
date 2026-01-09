@@ -78,8 +78,9 @@ Make sure the following are installed on your system:
 
 Install Vue CLI globally:
 
-
 npm install -g @vue/cli
+
+
 ⚙️ Setup & Run Instructions
 1️⃣ Clone the Repository
 
@@ -90,6 +91,7 @@ cd employee-management-system
 
 cd backend
 npm install
+
 Configure Database
 Update database credentials in:
 
@@ -106,9 +108,6 @@ Run Backend
 
 npm run dev
 Backend runs on:
-
-arduino
-Copy code
 http://localhost:5000
 
 3️⃣ Frontend Setup
@@ -122,13 +121,11 @@ http://localhost:8080
 🔐 Environment Variables
 Currently, the application uses hardcoded database configuration inside:
 
-arduino
-Copy code
+
 backend/src/config/db.js
 Example:
 
-js
-Copy code
+
 module.exports = mysql.createConnection({
   host: 'localhost',
   user: 'your_db_user',
